@@ -30,8 +30,6 @@ from pyrax.resource import BaseResource
 import pyrax.utils as utils
 
 
-MIN_SIZE = 100
-MAX_SIZE = 1024
 RETRY_INTERVAL = 5
 
 
@@ -284,10 +282,11 @@ class CloudBlockStorageManager(BaseManager):
         """
         Used to create the dict required to create a new volume
         """
-        if not isinstance(size, six.integer_types) or not (
-                MIN_SIZE <= size <= MAX_SIZE):
-            raise exc.InvalidSize("Volume sizes must be integers between "
-                    "%s and %s." % (MIN_SIZE, MAX_SIZE))
+        try:
+            int(size)
+        except:
+            raise exc.InvalidSize("Volume sizes must be integers")
+
         if volume_type is None:
             volume_type = "SATA"
         if description is None:

@@ -3,6 +3,12 @@ pyrax
 
 Python SDK for OpenStack/Rackspace APIs
 
+**Note: Please submit an issue before submitting a pull
+request so we can determine whether or not the change may be accepted.
+Pyrax is in the process of being deprecated in favor of the OpenStack
+SDK. We will announce the process and timelines for this deprecation
+as soon as we can.**
+
 See the LICENSE file for license and copyright information.
 
 **pyrax** should work with most OpenStack-based cloud deployments,
@@ -108,11 +114,11 @@ Support and Feedback
 --------------------
 
 You can find documentation for using the **pyrax** SDK at
-`docs.rackspace.com <http://docs.rackspace.com/sdks/guide/content/python.html>`_.
+https://developer.rackspace.com/sdks/python/.
 
 Your feedback is appreciated! If you have specific issues with the
 **pyrax** SDK, developers should file an `issue via
 Github <https://github.com/rackspace/pyrax/issues>`_.
 
-For general feedback and support requests, send an email to:
-`sdk-support@rackspace.com <mailto:sdk-support@rackspace.com>`_.
+For general feedback and support requests, contact us at
+https://developer.rackspace.com/support/
