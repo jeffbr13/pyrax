@@ -16,6 +16,8 @@ from subprocess import Popen, PIPE
 import sys
 import tempfile
 import threading
+
+import collections
 import time
 import types
 import unicodedata
@@ -189,6 +191,10 @@ class ResultsIterator(object):
 
     def __iter__(self):
         return self
+
+
+    def __next__(self):
+        return self.next()
 
 
     def next(self):
